@@ -9,7 +9,7 @@ public class Application {
 		//CustomerService customer = new CustomerServiceImpl();
 		ApplicationContext context = new ClassPathXmlApplicationContext("file:src/applicationContext.xml");
 		CustomerService customer = context.getBean("customerServiceImpl", com.deni.test.service.CustomerServiceImpl.class);
-		System.out.println(customer.getAll());
+		System.out.println(customer.getAll().get(0).getCustomerFirstName());
 	}
 
 }
