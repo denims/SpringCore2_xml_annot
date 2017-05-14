@@ -7,7 +7,7 @@
 		<property name="customer" ref="customer"></property>
 	</bean>
 	<bean name="customerServiceImpl" class="com.deni.test.service.CustomerServiceImpl">
-		<property name="customerRepo" ref="customerRepoImpl"></property>
+		<constructor-arg index="0" ref="customerRepoImpl"></constructor-arg>
 
 	</bean>
 </beans>

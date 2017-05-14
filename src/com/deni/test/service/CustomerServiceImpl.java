@@ -9,6 +9,12 @@ import com.deni.test.repository.CustomerRepoImpl;
 public class CustomerServiceImpl implements CustomerService {
 
 	private CustomerRepo customerRepo;
+	
+
+	public CustomerServiceImpl(CustomerRepo customerRepo) {
+		super();
+		this.customerRepo = customerRepo;
+	}
 
 	@Override
 	public List<Customer> getAll() {
